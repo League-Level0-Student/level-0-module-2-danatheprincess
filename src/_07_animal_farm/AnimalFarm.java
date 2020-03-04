@@ -12,6 +12,7 @@ import java.applet.AudioClip;
 import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 
+@SuppressWarnings("deprecation")
 public class AnimalFarm {
 	
 	public static void main(String[] args) {
@@ -19,8 +20,24 @@ public class AnimalFarm {
 		/* 1. Ask the user which animal they want, then play the sound of that animal. */			 
 			
 		/* 2. Make it so that the user can keep entering new animals. */
-
-	}
+		String answer = JOptionPane.showInputDialog("which animal would you like to hear?");
+		if(answer.equals("dog")) {
+		playWoof();	
+		}
+		if(answer.equals("cow")) {
+		playMoo();
+		}
+		if(answer.equals("duck")) {
+			playQuack();
+		}
+		if(answer.equals("cat")) {
+			playMeow();
+		}
+		if(answer.equals("llama")) {
+	playLlama();
+}
+}
+	
 
 	static void playMoo() {
 		playNoise(mooFile);
